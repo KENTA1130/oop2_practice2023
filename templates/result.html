@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='design3.css') }}">
+    <title>isostagram</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>変更しました</h1>
+        <a href="{{ url_for('get_image_name', image_name=image_name) }}">戻る</a>
+    </header>
+</body>

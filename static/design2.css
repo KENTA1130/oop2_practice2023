@@ -1,0 +1,118 @@
+ /* IsostagramIsostagram ホーム画面レイアウト(top_page.html) */
+ body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: 
+      linear-gradient(140deg, 
+        #00f3ffA0, 
+        #0028b960 40%, 
+        #00f3ff60 60%, 
+        #00f3ffA0), 
+      url("https://i.pinimg.com/564x/f3/57/d5/f357d517306537e0414f4293f27c2fff.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    animation: move 20s infinite both;
+  }
+  
+  @keyframes move{
+    0% {
+      background-size:100% auto;
+    }
+    50% {
+      background-size:140% auto;
+    }
+    100% {
+      background-size:100% auto;
+    }
+  }
+  
+  header {
+    background-color:  rgb(82, 108, 254);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+  }
+  
+ 
+
+
+  .h1 {
+    position: relative;
+    font-size: 60px;
+    opacity: 0; /* 初めは透明に設定 */
+    transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
+    animation: fadeInFromBottom 1s forwards; /* フェードインアニメーションの設定 */
+  }
+  
+  @keyframes fadeInFromBottom {
+    to {
+      opacity: 1; /* アニメーション終了時に完全に表示 */
+      transform: translateY(0); /* アニメーション終了時の位置 */
+    }
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  li {
+    box-sizing: border-box;
+    width: 30%;
+    margin: 1.5%;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ccc;
+  }
+
+  
+  ul.footer-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(82, 108, 254);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul.footer-links li {
+    float: left;
+}
+
+ul.footer-links li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+  
